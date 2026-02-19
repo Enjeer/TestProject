@@ -149,8 +149,13 @@ main {
 
 @media screen and (max-width: 768px) {
 
-    .heading__description{
+    
+    .heading{
         width: 70%;
+    }
+
+    .heading__description{
+        width: 100%;
     }
 
     .viewer__books.favourites-hidden .favourites{

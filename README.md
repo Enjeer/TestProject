@@ -75,6 +75,8 @@ You are all set and can now run the project locally!
 
 <p>Built application will be available at http://localhost:4173</p>
 
+#### You can access live verson here: <a href="https://testproject-bf6w.onrender.com" target="_blank">Live Library project</a>
+
 # 🛠️ Troubleshooting
 
 
