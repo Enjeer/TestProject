@@ -1,4 +1,6 @@
 // SearchView is responsible for rendering search UI and results
+
+import defaultCover from '../../src/assets/media/default_cover.png';
 export class SearchView {
     constructor(root) {
         this.root = root;
@@ -6,7 +8,7 @@ export class SearchView {
         this.searchBtn = this.root.querySelector('#searchBtn');
         this.resultsContainer = this.root.querySelector('#searchResults');
         this.errorMessageField = this.root.querySelector('#errorMessageField');
-        this.defaultImageCover = '../../src/assets/media/default_cover.png';
+        this.defaultImageCover = defaultCover;
 
         if (!this.root || !this.searchInput || !this.searchBtn || !this.resultsContainer || !this.errorMessageField || !this.defaultImageCover) {
             console.error('SearchView elements not found!');
