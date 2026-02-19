@@ -118,6 +118,6 @@ You are all set and can now run the project locally!
 
 - Use Node v16+
 
-- Run <code>npm install again</code>
+- Run <code>npm install</code> again
 
 Make sure vite is in devDependencies
