@@ -1,0 +1,160 @@
+/* =========================
+    Imports
+========================= */
+
+@import url('./utility/variables.css');
+@import url('./utility/results.css');
+@import url('./utility/search_tab.css');
+@import url('./utility/typography.css');
+@import url('./utility/favourtes.css');
+@import url('./utility/nav.css');
+
+
+/* =========================
+    Reset
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100svh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body,
+main,
+nav,
+section,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+}
+
+
+/* =========================
+    Layout
+========================= */
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: var(--base-color);
+}
+
+main {
+    width: 100%;
+}
+
+.lib {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.lib__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1440px;
+}
+
+
+/* =========================
+    Heading
+========================= */
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--base-padding);
+
+    text-align: center;
+    color: var(--text-color);
+}
+
+.heading__title {
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 3.1rem;
+}
+
+.heading__description {
+    width: 30%;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+}
+
+
+/* =========================
+    Viewer
+========================= */
+
+.viewer {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================
+    Books Grid
+========================= */
+
+.viewer__books {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 8px;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Modifier */
+
+.viewer__books.favourites-hidden {
+    display: flex;
+}
+
+.viewer__books.favourites-hidden .results {
+    justify-content: center;
+}
+
+.viewer__books.favourites-hidden .favourites{
+    width: fit-content;
+}
+
+
+/* =========================
+    Responsive
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .viewer__books .favourites{
+        transform: translateY(-25%);
+    }
+
+    .viewer__books.favourites-hidden .favourites{
+        transform: none;
+    }
+
+}

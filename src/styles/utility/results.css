@@ -1,0 +1,150 @@
+/* =========================
+    Results
+========================= */
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    width: 100%;
+    height: fit-content;
+
+    padding: var(--base-padding);
+}
+
+
+/* =========================
+    Result Card
+========================= */
+
+.results__result {
+    position: relative;
+
+    width: 190px;
+    overflow: hidden;
+    border-radius: var(--border-radius-outer);
+
+    background-color: var(--element-color);
+}
+
+.results__result.loading {
+    height: 320px;
+
+    background: var(--gradient);
+    background-size: 200% 100%;
+    animation: loading-gradient 4s linear infinite;
+}
+
+
+/* =========================
+    Cover
+========================= */
+
+.result__cover {
+    width: 100%;
+}
+
+.cover {
+    width: 100%;
+    aspect-ratio: .7;
+
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/* =========================
+    Favourite Button
+========================= */
+
+.result-add-to-favs {
+    position: absolute;
+    top: var(--base-padding);
+    right: var(--base-padding);
+
+    height: 25px;
+    aspect-ratio: 1;
+
+    border: none;
+    outline: none;
+    border-radius: var(--border-round);
+
+    background-color: var(--element-color);
+    background-image: url('../../assets/media/favourite-unchecked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 68%;
+
+    transition: transform .2s ease, background-size .2s ease;
+}
+
+.result-add-to-favs.favourite {
+    background-image: url('../../assets/media/favourite-checked.svg');
+}
+
+.result-add-to-favs:hover {
+    transform: scale(.9);
+}
+
+.result-add-to-favs:active {
+    background-size: 60%;
+}
+
+
+/* =========================
+    Credentials
+========================= */
+
+.result__credentials {
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--base-padding);
+
+    color: var(--text-color);
+}
+
+.result__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.result__author {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.result__date-of-publish {
+    font-size: .9rem;
+    font-weight: 400;
+
+    opacity: .6;
+}
+
+
+/* =========================
+    Animations
+========================= */
+
+@keyframes loading-gradient {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: -100% 50%;
+    }
+}
+
+
+/* =========================
+    Responsive
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .results{
+        justify-content: center;
+    }
+
+}

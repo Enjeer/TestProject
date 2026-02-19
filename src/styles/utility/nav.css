@@ -1,0 +1,73 @@
+/* =========================
+    Navigation
+========================= */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: fit-content;
+    padding: 15px;
+
+    color: var(--text-color);
+}
+
+
+/* =========================
+    Logo
+========================= */
+
+.nav__logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--base-padding);
+}
+
+.nav__logo {
+    background-color: var(--accent);
+    padding: var(--base-padding);
+    border-radius: var(--border-radius-outer);
+
+    content: url('../../assets/media/book.svg');
+}
+
+.nav__naming {
+    display: flex;
+    flex-direction: column;
+    
+    color: var(--text-color);
+}
+
+
+/* =========================
+    Theme Button
+========================= */
+
+.nav__theme-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    background-color: var(--element-color);
+    border: none;
+    border-radius: var(--border-radius-outer);
+
+    transition: transform .2s ease;
+}
+
+.nav__theme-button:hover {
+    transform: scale(.9);
+}
+
+.nav__theme-button:active .theme-button__icon {
+    height: 60%;
+}
+
+.theme-button__icon {
+    content: var(--theme-icon);
+    height: 70%;
+}

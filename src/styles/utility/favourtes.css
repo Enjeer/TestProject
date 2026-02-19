@@ -1,0 +1,246 @@
+/* =========================
+    Favourites Wrapper
+========================= */
+
+.favourites {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translateZ(0);
+}
+
+
+/* =========================
+    List Container
+========================= */
+
+.favourites__list-container {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: 100%;
+    height: 60svh;
+
+    padding: var(--base-padding);
+    transform: translateY(var(--base-padding));
+
+    background-color: var(--element-color);
+    border-radius: var(--border-radius-outer);
+}
+
+.viewer__books.favourites-hidden .favourites__list-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+
+/* =========================
+    Hide Button
+========================= */
+
+.favourites__hide-button {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: 35px;
+    height: 35px;
+
+    padding: var(--base-padding);
+
+    border: none;
+    border-radius: var(--border-radius-inner);
+    outline: solid 2px var(--base-color);
+    background-color: var(--base-color);
+
+    transition: transform .2s ease;
+}
+
+.favourites__hide-button .hide-button__icon{
+    content: var(--hide-icon);
+}
+
+.viewer__books.favourites-hidden .favourites__hide-button{
+    rotate: 180deg;
+}
+
+.favourites__hide-button:hover {
+    transform: scale(.9);
+}
+
+.favourites__hide-button:active {
+    background-color: var(--element-color);
+}
+
+
+/* =========================
+    List
+========================= */
+
+.favourites__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: 100%;
+    height: 60svh;
+
+    padding-right: 8px;
+
+    overflow-y: scroll;
+
+    border-radius: var(--border-radius-inner);
+
+    scrollbar-color: #C0C0C0 var(--element-color);
+}
+
+.viewer__books.favourites-hidden .favourites__list {
+    display: none;
+}
+
+
+/* --- Scrollbar --- */
+
+.favourites__list::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: var(--element-color);
+}
+
+.favourites__list::-webkit-scrollbar-thumb {
+    background: #C0C0C0;
+    border-radius: var(--border-round);
+}
+
+
+/* =========================
+    Favourite Item
+========================= */
+
+.favourites__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    flex-shrink: 0;
+    min-height: 120px;
+    height: fit-content;
+
+    overflow: hidden;
+    border-radius: var(--border-radius-inner);
+
+    color: var(--text-color);
+}
+
+
+/* --- Cover --- */
+
+.item__cover {
+    width: 80px;
+    aspect-ratio: .70;
+
+    align-self: flex-start;
+
+    border-radius: var(--border-radius-inner);
+}
+
+
+/* --- Credentials --- */
+
+.item__credentials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 55%;
+}
+
+.item__title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.item__author {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+
+/* --- Delete Button --- */
+
+.item__delete-button {
+    width: 25px;
+    aspect-ratio: 1;
+
+    margin-left: auto;
+    align-self: start;
+
+    border: none;
+    border-radius: var(--border-round);
+
+    background-color: transparent;
+    background-image: url('../../assets/media/favourite-checked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 68%;
+
+    transition: transform .2s ease, background-size .2s ease;
+}
+
+.item__delete-button:hover {
+    background-size: 60%;
+}
+
+.item__delete-button:active {
+    background-size: 68%;
+    transform: scale(.9);
+}
+
+
+/* =========================
+    Responsive
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .favourites {
+        position: fixed;
+        right: 0;
+        width: 90%;
+    }
+
+    .favourites__list-container{
+        flex-direction: column-reverse;
+        align-items: end;
+    }
+
+    .favourites__list {
+        width: 100%;
+        flex: 1;
+    }
+
+    .favourites__item{
+        justify-content: start;
+    }
+
+    .item__credentials {
+        width: fit-content;
+    }
+
+    .item__delete-button {
+        height: 50px;
+        width: 50px;
+        align-self: center;
+
+        background-size: 50%;
+    }
+}

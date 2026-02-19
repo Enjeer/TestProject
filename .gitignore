@@ -1,0 +1,16 @@
+# Node
+node_modules/
+
+# Build
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+
+# Optional temp
+*.tmp
+.DS_Store

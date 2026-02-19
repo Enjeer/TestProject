@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lib</title>
+</head>
+<body id="body" data-theme="light">
+    <header>
+        <nav class="nav" data-theme="light">
+            <div class="nav__logo-container">
+                <img class="nav__logo">
+                <div class="nav__naming">
+                    <span class="nav__name">Aboba</span>
+                    <span class="nav__slogan">Professional clown's lib</span>
+                </div>
+            </div>
+            <button type="button" class="nav__theme-button" id="themeBtn">
+                <img class="theme-button__icon" alt="">
+            </button>
+        </nav>
+    </header>
+    <main class="lib">
+        <section class="lib__container">
+            <div class="heading">
+                <h1 class="heading__title">Discover Your Next Great Read</h1>
+                <p class="heading__description">Search millions of books, build your personal library, and never lose track of what to read next</p>
+            </div>
+
+            <section class="viewer" data-theme="light" id="searchSection">
+                <div class="viewer__search-bar">
+                    <input class="viewer__search-input" data-theme="light" type="text" name="" id="searchInput" placeholder="Search">
+                    <button class="viewer__search-button" id="searchBtn" type="button">
+                        <img class="search-button__icon" src="./src/assets/media/search-alt-2-svgrepo-com.svg" alt="">
+                    </button>
+                    <span class="viewer__message-box" id="errorMessageField"></span>
+                </div>
+
+                <div class="viewer__books">
+                    <div class="results" data-theme="light" id="searchResults">
+
+                        <!-- Example block for styling -->
+
+                    <!-- <div class="results__result">
+                            <div class="result__cover">
+                                <img class="cover" src="" alt="">
+                                <button type="button" class="result-add-to-favs" id="addToFavs"></button>
+                            </div>
+                            <div class="result__credentials">
+                                <span class="result__title">название</span>
+                                <span class="result__author">автор</span>
+                                <span class="result__date-of-publish">123</span>
+                            </div>
+                        </div> -->
+
+                        <!--  -->
+
+                    </div>
+                    <div class="favourites" data-theme="light">
+                        <div class="favourites__list-container">
+                            <button type="button" class="favourites__hide-button" id="favsHideBtn">
+                                <img class="hide-button__icon" alt="">
+                            </button>
+                            <div class="favourites__list" id="favouritesResults">
+
+                                <!-- Example block for styling -->
+
+                            <!-- <div class="favourites__item" data-id="">
+                                    <img class="item__cover" src="" alt="">
+                                    <div class="item__credentials">
+                                        <span class="item__title"></span>
+                                        <span class="item__author"></span>
+                                    </div>
+                                    <button type="button" class="item__delete-button">X</button>
+                                </div> -->
+
+                                <!--  -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
