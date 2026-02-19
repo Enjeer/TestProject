@@ -82,17 +82,17 @@ You are all set and can now run the project locally!
 
 ### ❗️Empty search or no results
 
-#### 📢Symptoms:
+#### 📢 Symptoms:
 
 - Clicking “Search” returns nothing or errors in console.
 
-#### ❔Possible causes:
+#### ❔ Possible causes:
 
 - Input is empty → app is designed to show “Enter query” message.
 
 - API request failed due to network issues.
 
-#### ✅Solution:
+#### ✅ Solution:
 
 - Make sure your device has an internet connection.
 
@@ -100,21 +100,21 @@ You are all set and can now run the project locally!
 
 - Avoid special characters in the search query.
 
-### ❗️Build issues
+### ❗️ Build issues
 
-#### 📢Symptoms:
+#### 📢 Symptoms:
 
 - <code>npm run build</code> fails
 
 - dist/ folder is empty
 
-#### ❔Possible causes:
+#### ❔ Possible causes:
 
 - Node version too old
 
 - Missing dependencies
 
-#### ✅Solution:
+#### ✅ Solution:
 
 - Use Node v16+
 
