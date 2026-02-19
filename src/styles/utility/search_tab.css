@@ -96,4 +96,8 @@
         font-size: 1.3rem;
     }
 
+    .viewer__message-box{
+        transform: translate(50%, 45px);
+    }
+
 }
