@@ -1,3 +1,4 @@
+// SearchModel handles business logic for book search
 export class SearchModel {
     constructor(apiService) {
         this.apiService = apiService;
@@ -7,7 +8,7 @@ export class SearchModel {
     async search(query) {
         try {
             const rawResults = await this.apiService.searchBooks(query);
-
+            // Transform Open Library response into simplified book array
             this.results = rawResults.map(book => ({
                 key: book.key,
                 title: book.title,

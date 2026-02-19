@@ -1,3 +1,4 @@
+// ThemeView is responsible for switching UI theme
 export class ThemeView {
     constructor(root) {
         this.root = root

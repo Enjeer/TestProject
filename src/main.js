@@ -1,3 +1,4 @@
+// App initialization
 import { ApiService } from './services/ApiService.js';
 import { StorageService } from './services/StorageService.js';
 import { SearchModel } from './models/SearchModel.js';
@@ -9,6 +10,7 @@ import { FavouritesView } from './views/FavouritesView.js';
 import { LibController } from './controllers/LibController.js';
 import './styles/main.css';
 
+// Create services → models → views → controller
 const apiService = new ApiService();
 const storageService = new StorageService('favourites');
 
@@ -20,6 +22,7 @@ const searchView = new SearchView(document.getElementById('searchSection'));
 const favouritesView = new FavouritesView(document.getElementById('favouritesResults'));
 const themeView = new ThemeView(document.getElementById('body'));
 
+// Controller connects everything together
 new LibController({
   searchModel,
   favouritesModel,

@@ -1,3 +1,4 @@
+// FavouritesModel handles business logic for favourites list
 export class FavouritesModel {
     constructor(storageService) {
         this.storageService = storageService;

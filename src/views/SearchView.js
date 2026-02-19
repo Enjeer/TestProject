@@ -1,3 +1,4 @@
+// SearchView is responsible for rendering search UI and results
 export class SearchView {
     constructor(root) {
         this.root = root;
@@ -7,7 +8,7 @@ export class SearchView {
         this.errorMessageField = this.root.querySelector('#errorMessageField');
         this.defaultImageCover = '../../src/assets/media/default_cover.png';
 
-        if (!this.searchInput || !this.searchBtn || !this.resultsContainer) {
+        if (!this.root || !this.searchInput || !this.searchBtn || !this.resultsContainer || !this.errorMessageField || !this.defaultImageCover) {
             console.error('SearchView elements not found!');
         }
     }
@@ -56,6 +57,7 @@ export class SearchView {
         });
     }
 
+    // Handles UI states: loading, empty input, error, success
     setState = (state, data = null) =>{
         this.resultsContainer.innerHTML = '';
 

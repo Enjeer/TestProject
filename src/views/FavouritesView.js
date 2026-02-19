@@ -1,3 +1,4 @@
+// FavouritesView is responsible for rendering favourites UI
 export class FavouritesView {
     constructor(container) {
         this.container = container;

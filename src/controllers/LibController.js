@@ -1,3 +1,4 @@
+// LibController is responsible for handling user interactions and orchestrating the application
 export class LibController {
   constructor({ searchModel, favouritesModel, themeModel, searchView, favouritesView, themeView }) {
     this.searchModel = searchModel;
@@ -25,27 +26,32 @@ export class LibController {
     }
   }
 
+
   handleSearch = async (query) => {
     try{
       if (!query){
+        // Stop handler if user input is empty, set emptyRequest state to notify user
         this.searchView.setState('emptyRequest');
         return;
       }
-
+      // Set loading state before API request
       this.searchView.setState('loading');
 
       const results = await this.searchModel.search(query);
 
       if (!Array.isArray(results) || results.length === 0) {
+        // Set notFound state if api did not found the book
         this.searchView.setState('notFound');
         return;
       }
       
       const checkedResults = this.checkFavourites(results);
+      // Set success state to render results
       this.searchView.setState('success', checkedResults);
 
     } catch(err) {
       console.log(err);
+      //Set error state, notify user
       this.searchView.setState('err');
     }
   }

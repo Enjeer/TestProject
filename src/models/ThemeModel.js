@@ -1,3 +1,4 @@
+// ThemeModel handles logic for theme switching
 export class ThemeModel {
     constructor(storageService) {
             this.storageKey = 'theme';
