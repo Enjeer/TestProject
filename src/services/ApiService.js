@@ -5,9 +5,6 @@ export class ApiService {
         try {
         const res = await fetch(url, {
             method: 'GET',
-            headers: {
-            "User-Agent": "MyLibraryProject (wallesalex205@gmail.com)"
-            }
         });
 
         const data = await res.json();
