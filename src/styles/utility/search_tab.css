@@ -52,6 +52,10 @@
     cursor: pointer;
 }
 
+.search-button__icon{
+    content: url('../../assets/media/search-alt-2-svgrepo-com.svg');
+}
+
 .viewer__search-button:hover {
     background-color: var(--accent-hover);
 }

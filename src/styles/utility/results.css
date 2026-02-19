@@ -145,6 +145,11 @@
 
     .results{
         justify-content: center;
+        padding-right: 30px;
+    }
+
+    .results__result{
+        width: 150px;
     }
 
 }

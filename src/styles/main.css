@@ -149,8 +149,8 @@ main {
 
 @media screen and (max-width: 768px) {
 
-    .viewer__books .favourites{
-        transform: translateY(-25%);
+    .heading{
+        width: 90%;
     }
 
     .viewer__books.favourites-hidden .favourites{
